@@ -1,8 +1,11 @@
-name: Storybook Pull Request Workflow
+name: My Story Workflow
 on:
-  pull_request:
-    paths:
-      - 'storybook/**'
-jobs:
-  build:
-    # Define job steps for the workflow triggered by pull requests affecting the "storybook" directory
+  push:
+    branches:
+      - main
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
