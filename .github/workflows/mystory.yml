@@ -1,0 +1,8 @@
+name: Storybook Pull Request Workflow
+on:
+  pull_request:
+    paths:
+      - 'storybook/**'
+jobs:
+  build:
+    # Define job steps for the workflow triggered by pull requests affecting the "storybook" directory
